@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script type="ellx">
+    import { router, currentPage } from "./pages/currentPage.js"
+
+    page = currentPage(router.path)
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title data-is="page.title"></title>
+
+  <link rel="icon" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+
+<body>
+
+  <header class="w-full h-96 bg-[url('/assets/trefoil.png')] bg-cover bg-center">
+    <div class="mx-auto px-4">
+      <nav class="my-2 flex space-x-4 text-lg">
+        <a href="/"><img class="inline-block" src="/assets/trefoil.png" alt="Logo" width="25" height="25"></a>
+        <a class="text-amber-600 hover:opacity-60" href="/library">Библиотека</a>
+        <a class="text-amber-600 hover:opacity-60" href="/lectures">Лекции</a>
+      </nav>
+    </div>
+
+    <div class="flex flex-col h-full justify-center items-center">
+      <h1 class=" text-center text-5xl text-amber-800 font-bold drop-shadow-lg">Всероссийский
+        <span class="text-amber-500">математический Эллипс</span>
+      </h1>
+      <p class="mt-5 text-center text-xl text-amber-600 font-bold">Мы любим математику!</p>
+      <a class="mt-8 px-12 py-3 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-xl text-white/70 font-semibold drop-shadow-lg rounded-full"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSckachSE6o64u9f7n0saTkN06XYWEEZmOttJF7ZnAyF_3s-JA/viewform?usp=sf_link" target="_blank">
+        Принять участие
+      </a>
+    </div>
+  </header>
+
+  <div data-is="page.body"></div>
+</body>
+
+</html>
